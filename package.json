@@ -1,0 +1,32 @@
+{
+  "name": "veramo-agent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@veramo/core": "^5.5.3",
+    "@veramo/credential-w3c": "^5.5.3",
+    "@veramo/data-store": "^5.5.3",
+    "@veramo/did-manager": "^5.5.3",
+    "@veramo/did-provider-ethr": "^5.5.3",
+    "@veramo/did-provider-web": "^5.5.3",
+    "@veramo/did-resolver": "^5.5.3",
+    "@veramo/key-manager": "^5.5.3",
+    "@veramo/kms-local": "^5.5.3",
+    "ethr-did-resolver": "^10.0.0",
+    "sqlite3": "^5.1.6",
+    "web-did-resolver": "^2.0.27"
+  },
+  "scripts": {
+    "start": "node --loader ts-node/esm src/list-identifiers.ts",
+    "list-identifiers": "node --loader ts-node/esm src/list-identifiers.ts",
+    "create-identifier": "node --loader ts-node/esm src/create-identifier.ts",
+    "create-credential": "node --loader ts-node/esm src/create-credential.ts",
+    "verify-credential": "node --loader ts-node/esm src/verify-credential.ts"
+  }
+}
